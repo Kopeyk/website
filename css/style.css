@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #388ffb;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #206ab5;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: #3177ba;
+}
+
+.welcome-title {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 3em;
+  color: #25121a;
+}
+
+.form-title {
+  font-size: 2em;
+  color: #388ffb;
+  text-align: center;
+  margin: 30px 0 20px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.form-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content-text {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-top: 5px;
+}
+
+nav {
+  background-color: #34495e;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+.store-name {
+  font-size: 2em;
+  font-weight: bold;
+  color: #e74c3c;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.store-name:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.nav-button.active {
+  background-color: #e74c3c;
+}
+
+.products {
+  margin-top: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #2980b9;
+}
+
+.iphone-promo {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  margin-top: 20px;
+}
+
+.promo-text {
+  padding: 50px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #34495e;
+  color: white;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 5px 0;
+  }
+  .nav-button, .store-name {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .iphone-promo {
+    flex-direction: column;
+    height: auto;
+  }
+  .promo-text {
+    padding: 20px;
+  }
+  .promo-image img {
+    width: 100%;
+    height: auto;
+  }
+  .welcome-title {
+    font-size: 2em;
+  }
+  .form-title {
+    font-size: 1.5em;
+  }
+}
